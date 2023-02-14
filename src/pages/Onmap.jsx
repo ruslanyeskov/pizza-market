@@ -4,7 +4,6 @@ const Onmap = () => {
   return (
     <div>
     	map page
-    	<img src="../img/chert.jpg" />
     </div>
   )
 }

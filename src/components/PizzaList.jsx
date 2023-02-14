@@ -17,21 +17,20 @@ const PizzaList = (props) => {
 
   return (
     <section className="Pizza_block">
-    	<img src="../img/kasiotore.jpeg" alt="pizza img" />
     	<div className="Pizza_list">
         	{pizza.map((elem,index) => 
         	  <div key={index} className="Pizza_item">
-        	  	<img src="" alt="img" />       	  	
+        	  	<img src={elem.img} alt="img" />       	  	
         	    <h2 className="Pizza_item_title">{elem.id}. {elem.title}</h2>
         	    <div className="Pizza_item_allprice">
         	      {elem.price.map((priceElem,index) => 
-        	        <h4 key={index} className="Pizza_item_price">Price {priceElem}</h4>
+        	        <h4 key={index} className="Pizza_item_price">Price {priceElem}$</h4>
         	      )}
         	    </div>
         	    <div className="Pizza_item_allsize">
         	      {elem.size.map((sizeElem,index) =>       	       	
         	        <div key={index}>
-        	        {sizeElem}
+        	        {sizeElem}cm
         	        <input 
         	        key={index} 
         	        className="Pizza_item_size" 
