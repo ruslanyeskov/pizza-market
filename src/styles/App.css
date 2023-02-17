@@ -15,15 +15,126 @@ ul,li{list-style-type: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
 
+@font-face{
+	font-family: 'montserrat', sans-serif;
+	src: url('../fonts/montserrat/Montserrat-Light.ttf') format('truetype');
+}
+
 #wrapper{
+
+}
+
+.Container{
 	max-width: 1200px;
 	margin: 0px auto;
 	padding: 0 15px;
 }
 
+.TopMenu{
+	max-width: 1200px;
+	margin: 0px auto;
+	padding: 15px 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Pizza_logo{
+	font-family: 'montserrat', sans-serif;
+	font-size: 35px;
+	color: black;
+	font-weight: 600;
+}
+
+.Pizza_logo span{
+	color: red;
+	font-weight: 300;
+}
+
+.Social_list{
+	display: flex;	
+}
+
+.social_link{
+	border-radius: 50%;
+	margin: 0px 5px;
+}
+
+.social_img{
+	fill: black;
+	width: 30px;
+	height: 30px;
+	transition: 0.2s ease-in-out;
+}
+
+.social_img:hover{
+	fill: red;
+}
+
+.Menu_wrapper{
+	position: relative;
+	background-color: rgba(20, 20, 20, 1.0);
+}
+
+.Menu_list{
+	max-width: 1200px;
+	margin: 0px auto;
+	padding: 0 15px;	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 5px;
+}
+
+.Menu_link{
+	font-family: 'montserrat', sans-serif;
+	margin-right: 5px;
+	padding: 20px 30px;
+	background-color: rgba(20, 20, 20, 1.0);
+	color: rgba(255, 255, 255, 1.0);
+	text-align: center;
+	flex-grow: 1;
+}
+
+.Menu_link:hover{
+	background-image: url('../../public/fire.gif');
+	animation: pumping 0.8s linear infinite;
+	z-index: 2;
+}
+
+.Menu_link:last-child{
+	margin-right: 0;
+}
+
+.sliderwrapper{
+	max-width: 1200px;
+	margin: 0px auto;
+	padding: 0 15px;
+}
+
+.swiper-pagination-horizontal .swiper-pagination-bullet{
+	background: black;
+}
+
+.slide_img{
+	width: 100%;
+}
+
 .Pizza_list{
+	max-width: 1200px;
+	margin: 0px auto;
+	padding: 0 15px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.Pizza_item{
+	max-width: 200px;
+}
+
+.Pizza_img{
+	width: 100%;
 }
 
 

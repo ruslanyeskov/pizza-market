@@ -20,26 +20,27 @@ const PizzaList = (props) => {
     	<div className="Pizza_list">
         	{pizza.map((elem,index) => 
         	  <div key={index} className="Pizza_item">
-        	  	<img src={elem.img} alt="img" />       	  	
+        	  	<img src={elem.img} alt="img" className="Pizza_img"/>       	  	
         	    <h2 className="Pizza_item_title">{elem.id}. {elem.title}</h2>
         	    <div className="Pizza_item_allprice">
         	      {elem.price.map((priceElem,index) => 
         	        <h4 key={index} className="Pizza_item_price">Price {priceElem}$</h4>
         	      )}
         	    </div>
-        	    <div className="Pizza_item_allsize">
+        	    <form className={"Pizza_item_allsize"}>
         	      {elem.size.map((sizeElem,index) =>       	       	
-        	        <div key={index}>
-        	        {sizeElem}cm
-        	        <input 
-        	        key={index} 
-        	        className="Pizza_item_size" 
-        	        type="radio" 
-        	        name={elem.title}
-        	        />
-        	        </div>
+                  <div key={index} className={"item_size_radio_" + elem.title}>
+                  {sizeElem}
+                  <input 
+                  key={index} 
+                  className="Pizza_item_size" 
+                  type="radio" 
+                  name={elem.title}
+                  onClick={(e) => console.log(e)}
+                  />
+                  </div>
         	      )}
-        	    </div>
+        	    </form>
         	    <h3 className="Pizza_item_sale">Sale {elem.sale}</h3>
        	 	    <h3 className="Pizza_item_descr">Ingredients: {elem.body}</h3>  
         	  </div>

@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import axios from 'axios'
 import PizzaList from '../components/PizzaList.jsx';
+import Slider from '../components/UI/slider/Slider.jsx'
 
 const Home = () => {
 
-
   return (
-    <div>           
-    	<h1>home page</h1>
+    <div className="Container"> 
+      <Slider />        
+    	<h1>Главная</h1>
       <PizzaList />
     </div>
   )
